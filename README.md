@@ -7,7 +7,7 @@ A command on fish shell to get the Bitwarden CLI functionality in Rofi menu.
 
 - [fish](https://github.com/fish-shell/fish-shell) >= `3.2.0`
 - [fisher](https://github.com/jorgebucaran/fisher)
-- [bw](https://github.com/bitwarden/cli)
+- [rbw](https://github.com/dynamotn/rbw): My custom version of rbw
 - [rofi](https://github.com/davatorium/rofi)
 - `glib2`: send notification
 
