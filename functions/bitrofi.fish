@@ -19,6 +19,8 @@ function bitrofi
         set timeout 0.1
       case 10
         rbw sync
+        and __bitrofi_show_error "Sync vault successfully"
+        or __bitrofi_show_error "Sync vault failed"
         return
       case 11
         set result (rbw get --field totp $item)
