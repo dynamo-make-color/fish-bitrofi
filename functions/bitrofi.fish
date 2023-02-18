@@ -19,8 +19,8 @@ function bitrofi
         set timeout 0.1
       case 10
         rbw sync
-        and __bitrofi_show_error "Sync vault successfully"
-        or __bitrofi_show_error "Sync vault failed"
+        and __bitrofi_notify "Sync vault successfully"
+        or __bitrofi_notify "Sync vault failed"
         return
       case 11
         set result (rbw get --field totp $item)
@@ -31,10 +31,10 @@ function bitrofi
       case '*'
         return
     end
-    __bitrofi_show_error "Please remove your finger to keyboard"
+    __bitrofi_notify "Please remove your finger to keyboard"
     sleep $timeout
     echo "type $result" | xdotool -
   else
-    __bitrofi_show_error "Can't unlock Bitwarden vault"
+    __bitrofi_notify "Can't unlock Bitwarden vault"
   end
 end

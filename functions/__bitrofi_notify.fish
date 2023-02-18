@@ -1,4 +1,4 @@
-function __bitrofi_show_error -a message -d 'Show error message on notification'
+function __bitrofi_notify -a message -d 'Show message on notification'
   gdbus call --session \
     --dest=org.freedesktop.Notifications \
     --object-path=/org/freedesktop/Notifications \
